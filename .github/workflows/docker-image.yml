@@ -19,6 +19,6 @@ jobs:
       id: docker_tag
       run: echo "TAG=$(date +%s)" >> $GITHUB_ENV
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/${{ github.repository_owner }}/progai-middleware:${{ env.TAG }}
+      run: docker build . --file Dockerfile --tag ghcr.io/${{ github.repository_owner }}/progai-middleware-example:${{ env.TAG }}
     - name: Push the Docker image
-      run: docker push ghcr.io/${{ github.repository_owner }}/progai-middleware:${{ env.TAG }}
+      run: docker push ghcr.io/${{ github.repository_owner }}/progai-middleware-example:${{ env.TAG }}
